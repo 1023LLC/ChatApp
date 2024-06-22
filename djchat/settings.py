@@ -30,6 +30,11 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    
+    # External
+    "drf_spectacular",
+    
+    # Internal
     "account",
     "server",
 ]
@@ -119,3 +124,17 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
 AUTH_USER_MODEL = "account.Account"
+
+
+REST_FRAMEWORK = {
+    "DEFAULT_SCHEMA_CLASS": "drf_spectacular.openapi.AutoSchema"
+}
+
+
+SPECTACULAR_SETTINGS = {
+    'TITLE': 'Chat API',
+    'DESCRIPTION': 'La Meillure',
+    'VERSION': 'v1',
+    'SERVE_INCLUDE_SCHEMA': True,
+    
+}
