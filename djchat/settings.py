@@ -33,6 +33,7 @@ INSTALLED_APPS = [
     
     # External
     "drf_spectacular",
+    "rest_framework",
     
     # Internal
     "account",
